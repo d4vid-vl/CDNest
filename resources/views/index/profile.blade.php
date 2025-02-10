@@ -1,4 +1,4 @@
-<x-layout>
+<x-base-layout>
     <div>
         <h1>{{ $user->name }}</h1>
         <p>{{ $user->email }}</p>
@@ -8,4 +8,4 @@
         <a href="{{ route('profile.edit') }}">Edit</a>
     @endif
     </div>
-</x-layout>
+</x-base-layout>
