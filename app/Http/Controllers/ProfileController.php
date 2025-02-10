@@ -11,6 +11,10 @@ use Illuminate\View\View;
 
 class ProfileController extends Controller
 {
+    public function show($id)
+    {
+        return redirect('/profile/' . $id);
+    }
     /**
      * Display the user's profile form.
      */
