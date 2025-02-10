@@ -1,4 +1,4 @@
-<x-layout>
+<x-base-layout>
 <div>
     @guest
     <a>You're not logged in</a>
@@ -20,7 +20,11 @@
     
     @auth
     <a>Welcome {{ Auth::user()->name }}!</a>
-    <a>Check your profile</a>
+    <a
+    href="{{ route('profile.show', Auth::user()->id) }}"
+    class="rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20] dark:text-white dark:hover:text-white/80 dark:focus-visible:ring-white"
+    >
+    Check your profile</a>
     <a 
 	href="{{ route('profile.edit') }}"
     class="rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20] dark:text-white dark:hover:text-white/80 dark:focus-visible:ring-white"
@@ -29,4 +33,4 @@
     </a>
     @endauth 
 </div>
-</x-layout>
+</x-base-layout>
