@@ -34,6 +34,7 @@ Route::get('/profile/{id}', function($id) {
 # Posts
 
 Route::controller(PostController::class)->group(function () {
+    Route::get('/browse', 'index');
     Route::get('/post/upload', 'create')->middleware(['auth', 'verified']);
     Route::post('/post/upload', 'store')->middleware(['auth', 'verified']);
 });
