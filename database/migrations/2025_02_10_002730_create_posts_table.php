@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->foreignId('user_id')->constrained();
             $table->string('original_name');
+            $table->string('name');
             $table->string('size');
             $table->string('tags');
             $table->string('source');
